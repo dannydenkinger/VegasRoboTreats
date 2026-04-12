@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ChocoPrint Technical Specifications | 3D Chocolate Printer | VEGAS ROBO TREATS</title>
+<meta name="description" content="Technical specifications for the ChocoPrint 3D chocolate printer. Dimensions, power, capacity, models, and engineering data."/>
+<link rel="canonical" href="https://www.vegasrobotreats.com/specs-chocoprint.html"/>
+<meta property="og:title" content="ChocoPrint 3D Chocolate Printer Specifications | VEGAS ROBO TREATS"/>
+<meta property="og:description" content="Technical specifications for the ChocoPrint 3D chocolate printer. Dimensions, power, capacity, models, and engineering data."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.vegasrobotreats.com/specs-chocoprint.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#4f006d",
+                    "surface-container-highest": "#262626",
+                    "background": "#0e0e0e",
+                    "on-surface": "#ffffff",
+                    "on-surface-variant": "#adaaaa",
+                    "primary": "#df8eff",
+                    "on-error": "#490013",
+                    "on-tertiary-container": "#000000",
+                    "inverse-surface": "#fcf9f8",
+                    "secondary": "#00e3fd",
+                    "outline": "#767575",
+                    "on-tertiary-fixed": "#39000c",
+                    "on-secondary-fixed": "#003a42",
+                    "secondary-container": "#006875",
+                    "surface-bright": "#2c2c2c",
+                    "tertiary": "#ff6e81",
+                    "primary-fixed-dim": "#d061ff",
+                    "on-background": "#ffffff",
+                    "surface-variant": "#262626",
+                    "surface": "#0e0e0e",
+                    "primary-dim": "#bb00fc",
+                    "inverse-on-surface": "#565555",
+                    "secondary-dim": "#00d4ec",
+                    "on-secondary": "#004d57",
+                    "on-primary-container": "#3d0055",
+                    "error": "#ff6e84",
+                    "on-error-container": "#ffb2b9",
+                    "surface-container": "#1a1919",
+                    "primary-container": "#d878ff",
+                    "on-secondary-fixed-variant": "#005964",
+                    "primary-fixed": "#d878ff",
+                    "tertiary-fixed-dim": "#ff7989",
+                    "secondary-fixed": "#26e6ff",
+                    "error-container": "#a70138",
+                    "inverse-primary": "#9a00d0",
+                    "tertiary-dim": "#e7004c",
+                    "surface-dim": "#0e0e0e",
+                    "surface-container-low": "#131313",
+                    "surface-container-high": "#201f1f",
+                    "secondary-fixed-dim": "#00d7f0",
+                    "on-primary-fixed-variant": "#4b0068"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, #ff6e81, #df8eff);
+            z-index: -1;
+            border-radius: inherit;
+            opacity: 0.3;
+        }
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: radial-gradient(circle, #262626 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-tertiary selection:text-on-tertiary-container">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl shadow-[0px_0px_48px_rgba(223,142,255,0.08)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto font-['Space_Grotesk'] tracking-tight">
+<a href="index.html" class="text-2xl font-black tracking-tighter text-[#df8eff] uppercase no-underline">VEGAS ROBO TREATS</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300" href="index.html">Home</a>
+<a class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300" href="machines.html">Machines</a>
+<div class="relative group">
+<button class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300 flex items-center gap-1">
+Partnership
+<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+<div class="bg-surface-container-high border border-white/10 rounded-lg shadow-2xl p-2 min-w-[220px] backdrop-blur-xl">
+<a href="partners.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">handshake</span>
+<div>
+<span class="block text-sm font-medium">How It Works</span>
+<span class="block text-[10px] text-on-surface-variant">Partnership models &amp; FAQ</span>
+</div>
+</a>
+<a href="calculator.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">calculate</span>
+<div>
+<span class="block text-sm font-medium">Revenue Calculator</span>
+<span class="block text-[10px] text-on-surface-variant">Estimate your earnings</span>
+</div>
+</a>
+<a href="schedule.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+<div>
+<span class="block text-sm font-medium">Book a Free Visit</span>
+<span class="block text-[10px] text-on-surface-variant">Schedule a consultation</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="relative group">
+<button class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300 flex items-center gap-1">
+Company
+<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+<div class="bg-surface-container-high border border-white/10 rounded-lg shadow-2xl p-2 min-w-[220px] backdrop-blur-xl">
+<a href="about.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">info</span>
+<div>
+<span class="block text-sm font-medium">About Us</span>
+<span class="block text-[10px] text-on-surface-variant">Our story &amp; contact</span>
+</div>
+</a>
+<a href="service-areas.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<div>
+<span class="block text-sm font-medium">Service Areas</span>
+<span class="block text-[10px] text-on-surface-variant">Las Vegas Valley coverage</span>
+</div>
+</a>
+<a href="blog.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">article</span>
+<div>
+<span class="block text-sm font-medium">Blog</span>
+<span class="block text-[10px] text-on-surface-variant">Tips &amp; insights</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<a href="about.html#contact" class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-xs scale-95 active:scale-90 transition-transform hover:bg-primary-container no-underline">Get Started</a>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-surface-container border-t border-white/5 px-8 py-6 space-y-2 font-['Space_Grotesk']">
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2" href="index.html">Home</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2" href="machines.html">Machines</a>
+<div class="border-t border-white/5 pt-2 mt-2">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2 px-0">Partnership</p>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="partners.html">How It Works</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="calculator.html">Revenue Calculator</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="schedule.html">Book a Free Visit</a>
+</div>
+<div class="border-t border-white/5 pt-2 mt-2">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2 px-0">Company</p>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="about.html">About Us</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="service-areas.html">Service Areas</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="blog.html">Blog</a>
+</div>
+</div>
+</nav>
+<!-- Background Content Layer (Simulated Page) -->
+<main class="min-h-screen pt-32 px-8 flex flex-col items-center justify-center bg-grid">
+<div class="text-center max-w-3xl mb-12">
+<h1 class="text-7xl font-black font-headline tracking-tighter mb-4">PRINT THE <span class="text-tertiary">SWEET</span>.</h1>
+<p class="text-on-surface-variant text-xl">The engineering behind our autonomous 3D chocolate printer — placed in your business for free.</p>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-tertiary to-primary rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative bg-surface-container-low rounded-lg p-2">
+<img loading="lazy" alt="ChocoPrint 3D Chocolate Printer" class="w-[400px] h-[500px] object-cover rounded-lg" data-alt="ChocoPrint 3D chocolate printer render with sleek dark design" src="photos/chocoprint-render.webp"/>
+</div>
+</div>
+</main>
+<!-- Modal Backdrop -->
+<div class="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-6 bg-background/80 backdrop-blur-md">
+<!-- Specification Modal -->
+<div class="relative w-full max-w-5xl bg-surface-container-low rounded-t-xl md:rounded-xl overflow-hidden shadow-[0px_0px_64px_rgba(255,110,129,0.15)] border border-white/5 border-b-0 md:border-b">
+<!-- Close Button (Mobile Handle) -->
+<div class="md:hidden w-full flex justify-center py-4">
+<div class="w-12 h-1.5 bg-surface-container-highest rounded-full"></div>
+</div>
+<!-- Modal Header -->
+<div class="px-8 pt-8 md:pt-10 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-8 h-[2px] bg-tertiary"></span>
+<span class="text-tertiary font-label text-xs tracking-widest uppercase font-bold">Product Data Sheet</span>
+</div>
+<h2 class="text-5xl md:text-6xl font-black font-headline tracking-tighter text-on-surface uppercase leading-none">
+                        Choco<span class="text-tertiary">Print</span>
+</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right">
+<p class="text-xs text-on-surface-variant uppercase tracking-widest font-bold">Model Number</p>
+<p class="text-xl font-headline font-bold text-on-surface">VRT-CP-2024</p>
+</div>
+<a href="product-chocoprint.html" class="material-symbols-outlined text-on-surface-variant hover:text-white transition-colors p-2 bg-surface-container-high rounded-full no-underline">close</a>
+</div>
+</div>
+<!-- Robot Signature Scanning Line -->
+<div class="w-full h-[2px] bg-surface-container-highest relative overflow-hidden">
+<div class="absolute inset-0 bg-tertiary w-1/4 animate-[scan_3s_linear_infinite]"></div>
+</div>
+<div class="p-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Technical Visualization Section -->
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden flex items-center justify-center relative">
+<model-viewer
+    loading="lazy"
+    src="models/ChocoPrint.glb"
+    alt="ChocoPrint 3D Chocolate Printer 3D Model"
+    auto-rotate
+    camera-controls
+    touch-action="pan-y"
+    style="width: 100%; height: 100%; background-color: #201f1f;"
+    exposure="1"
+    shadow-intensity="1"
+></model-viewer>
+<!-- Floating Spec Tags -->
+<div class="absolute bottom-6 left-6 right-6 flex flex-col gap-2">
+<div class="bg-surface-container-highest/60 backdrop-blur-md px-4 py-2 rounded-md border border-white/10 flex justify-between items-center">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Stability Rating</span>
+<span class="text-sm font-bold text-secondary">A+ COMMERCIAL</span>
+</div>
+<div class="bg-surface-container-highest/60 backdrop-blur-md px-4 py-2 rounded-md border border-white/10 flex justify-between items-center">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Print Time</span>
+<span class="text-sm font-bold text-tertiary">2.5 - 4 MIN</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Grid Specs Section -->
+<div class="md:col-span-7 grid grid-cols-2 gap-4">
+<!-- Dimensions -->
+<div class="col-span-2 bg-surface-container-high p-6 rounded-lg border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-6xl">straighten</span>
+</div>
+<h4 class="text-xs font-bold text-tertiary uppercase tracking-[0.2em] mb-4">Dimensions</h4>
+<div class="flex justify-between items-end">
+<div>
+<span class="block text-4xl font-headline font-black">2.06<span class="text-lg font-light text-on-surface-variant ml-1">M</span></span>
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Height</span>
+</div>
+<div class="h-8 w-[1px] bg-white/10"></div>
+<div>
+<span class="block text-4xl font-headline font-black">1.12<span class="text-lg font-light text-on-surface-variant ml-1">M</span></span>
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Width</span>
+</div>
+<div class="h-8 w-[1px] bg-white/10"></div>
+<div>
+<span class="block text-4xl font-headline font-black">0.65<span class="text-lg font-light text-on-surface-variant ml-1">M</span></span>
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Depth</span>
+</div>
+</div>
+</div>
+<!-- Weight -->
+<div class="col-span-1 bg-surface-container-high p-6 rounded-lg border border-white/5">
+<h4 class="text-xs font-bold text-secondary uppercase tracking-[0.2em] mb-4">Weight</h4>
+<div class="space-y-4">
+<div>
+<p class="text-2xl font-headline font-bold">~180<span class="text-sm text-on-surface-variant ml-1">KG</span></p>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Net Weight</p>
+</div>
+<div class="w-full h-[1px] bg-white/5"></div>
+<div>
+<p class="text-2xl font-headline font-bold">~220<span class="text-sm text-on-surface-variant ml-1">KG</span></p>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Shipping</p>
+</div>
+</div>
+</div>
+<!-- Power -->
+<div class="col-span-1 bg-surface-container-high p-6 rounded-lg border border-white/5">
+<h4 class="text-xs font-bold text-tertiary uppercase tracking-[0.2em] mb-4">Power</h4>
+<div class="space-y-4">
+<div>
+<p class="text-2xl font-headline font-bold text-tertiary">Varies<span class="text-sm text-on-surface-variant ml-1">by model</span></p>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Peak Output</p>
+</div>
+<div class="w-full h-[1px] bg-white/5"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">bolt</span>
+<p class="text-sm font-bold uppercase">220V-11A / 110V-22A</p>
+</div>
+</div>
+</div>
+<!-- Models & Capacity -->
+<div class="col-span-2 bg-surface-container-high p-6 rounded-lg border border-white/5">
+<h4 class="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-4">Models & Capacity</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-widest text-on-surface border border-white/10">Model 1: 25 Units</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-widest text-on-surface border border-white/10">Model 2 Pro: 100 Units</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-widest text-on-surface border border-white/10">1-2 Flavors</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-widest text-on-surface border border-white/10">2.5-4 Min Print</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-widest text-on-surface border border-white/10">Hundreds of Designs</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-widest text-on-surface border border-white/10">Custom Branding</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer CTA -->
+<div class="p-8 pt-0 flex flex-col md:flex-row gap-4 items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-[#00ff00] animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">System Status: Active / Optimal</span>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<a href="about.html#contact" class="flex-1 md:flex-none bg-tertiary text-on-tertiary-container px-10 py-4 rounded-xl font-black font-headline uppercase tracking-widest shadow-[0px_0px_24px_rgba(255,110,129,0.4)] hover:scale-105 active:scale-95 transition-all no-underline text-center">Get This Machine Free</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Footer Anchor -->
+<footer class="w-full bg-[#0e0e0e] border-t border-white/5 font-['Manrope'] text-xs uppercase tracking-widest relative z-[200]">
+<div class="w-full px-12 py-16 flex flex-col md:flex-row justify-between items-center gap-8">
+<a href="index.html" class="text-lg font-bold text-[#df8eff] no-underline">VEGAS ROBO TREATS</a>
+<div class="flex flex-wrap justify-center gap-8 text-gray-500">
+<a class="hover:text-white transition-colors" href="privacy-policy.html">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="terms.html">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="specs-cotton-candy.html">Installation Guide</a>
+<a class="hover:text-white transition-colors" href="about.html#contact">Support</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="https://instagram.com/vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#df8eff] transition-colors no-underline" aria-label="Instagram">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+</a>
+<a href="https://tiktok.com/@vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#00e3fd] transition-colors no-underline" aria-label="TikTok">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46v-7.15a8.16 8.16 0 005.58 2.2v-3.46a4.85 4.85 0 01-1.4-.22 4.83 4.83 0 01-2.4-1.54V6.69h3.8z"/></svg>
+</a>
+<a href="https://facebook.com/vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#df8eff] transition-colors no-underline" aria-label="Facebook">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+</a>
+</div>
+<div class="text-gray-500">&copy; 2026 VEGAS ROBO TREATS. ALL RIGHTS RESERVED.</div>
+</div>
+</footer>
+<style>
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(400%); }
+        }
+    </style>
+</body></html>
