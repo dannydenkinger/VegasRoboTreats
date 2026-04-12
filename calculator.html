@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Revenue Calculator | How Much Can Your Business Earn? | VEGAS ROBO TREATS</title>
+<meta name="description" content="Calculate how much extra income your business could earn with a free Vegas Robo Treats machine. Zero cost, zero labor — pure additional revenue."/>
+<link rel="canonical" href="https://www.vegasrobotreats.com/calculator.html"/>
+<meta property="og:title" content="Revenue Calculator | See What You Could Earn | VEGAS ROBO TREATS"/>
+<meta property="og:description" content="Calculate how much extra income your business could earn with a free Vegas Robo Treats machine. Zero cost, zero labor — pure additional revenue."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.vegasrobotreats.com/calculator.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#4b0068",
+                    "tertiary": "#ff6e81",
+                    "surface-container-high": "#201f1f",
+                    "tertiary-dim": "#e7004c",
+                    "surface-tint": "#df8eff",
+                    "on-surface-variant": "#adaaaa",
+                    "on-error-container": "#ffb2b9",
+                    "outline": "#767575",
+                    "on-secondary-fixed-variant": "#005964",
+                    "secondary-dim": "#00d4ec",
+                    "on-primary-fixed": "#000000",
+                    "on-secondary": "#004d57",
+                    "primary-container": "#d878ff",
+                    "surface": "#0e0e0e",
+                    "background": "#0e0e0e",
+                    "on-secondary-fixed": "#003a42",
+                    "tertiary-container": "#ff0355",
+                    "on-primary": "#4f006d",
+                    "on-surface": "#ffffff",
+                    "surface-bright": "#2c2c2c",
+                    "on-secondary-container": "#e8fbff",
+                    "surface-variant": "#262626",
+                    "primary-dim": "#bb00fc",
+                    "on-tertiary": "#490012",
+                    "on-primary-container": "#3d0055",
+                    "outline-variant": "#484847",
+                    "surface-container-highest": "#262626",
+                    "secondary": "#00e3fd",
+                    "inverse-surface": "#fcf9f8",
+                    "primary": "#df8eff",
+                    "primary-fixed-dim": "#d061ff",
+                    "on-error": "#490013",
+                    "on-background": "#ffffff",
+                    "error-dim": "#d73357",
+                    "tertiary-fixed": "#ff909b",
+                    "tertiary-fixed-dim": "#ff7989",
+                    "on-tertiary-fixed": "#39000c",
+                    "surface-container-low": "#131313",
+                    "secondary-fixed": "#26e6ff",
+                    "secondary-container": "#006875",
+                    "surface-container": "#1a1919",
+                    "secondary-fixed-dim": "#00d7f0",
+                    "error": "#ff6e84",
+                    "on-tertiary-fixed-variant": "#780023",
+                    "surface-container-lowest": "#000000",
+                    "primary-fixed": "#d878ff",
+                    "inverse-primary": "#9a00d0",
+                    "inverse-on-surface": "#565555",
+                    "on-tertiary-container": "#000000",
+                    "surface-dim": "#0e0e0e",
+                    "error-container": "#a70138"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Space Grotesk"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Manrope"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            color: #ffffff;
+            font-family: 'Manrope', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.2);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(223, 142, 255, 0.1);
+        }
+        .neon-glow-primary {
+            text-shadow: 0 0 15px rgba(223, 142, 255, 0.6);
+        }
+        .neon-glow-secondary {
+            text-shadow: 0 0 15px rgba(0, 227, 253, 0.6);
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #262626;
+            border-radius: 2px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #00e3fd;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
+            box-shadow: 0 0 10px rgba(0, 227, 253, 0.8);
+        }
+        .scanning-line {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, #00e3fd, transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary-container">
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl shadow-[0px_0px_48px_rgba(223,142,255,0.08)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto font-['Space_Grotesk'] tracking-tight">
+<a href="index.html" class="text-2xl font-black tracking-tighter text-[#df8eff] uppercase no-underline">VEGAS ROBO TREATS</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300" href="index.html">Home</a>
+<a class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300" href="machines.html">Machines</a>
+<div class="relative group">
+<button class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300 flex items-center gap-1">
+Partnership
+<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+<div class="bg-surface-container-high border border-white/10 rounded-lg shadow-2xl p-2 min-w-[220px] backdrop-blur-xl">
+<a href="partners.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">handshake</span>
+<div>
+<span class="block text-sm font-medium">How It Works</span>
+<span class="block text-[10px] text-on-surface-variant">Partnership models &amp; FAQ</span>
+</div>
+</a>
+<a href="calculator.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">calculate</span>
+<div>
+<span class="block text-sm font-medium">Revenue Calculator</span>
+<span class="block text-[10px] text-on-surface-variant">Estimate your earnings</span>
+</div>
+</a>
+<a href="schedule.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+<div>
+<span class="block text-sm font-medium">Book a Free Visit</span>
+<span class="block text-[10px] text-on-surface-variant">Schedule a consultation</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="relative group">
+<button class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300 flex items-center gap-1">
+Company
+<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+<div class="bg-surface-container-high border border-white/10 rounded-lg shadow-2xl p-2 min-w-[220px] backdrop-blur-xl">
+<a href="about.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">info</span>
+<div>
+<span class="block text-sm font-medium">About Us</span>
+<span class="block text-[10px] text-on-surface-variant">Our story &amp; contact</span>
+</div>
+</a>
+<a href="service-areas.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<div>
+<span class="block text-sm font-medium">Service Areas</span>
+<span class="block text-[10px] text-on-surface-variant">Las Vegas Valley coverage</span>
+</div>
+</a>
+<a href="blog.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
+<span class="material-symbols-outlined text-lg">article</span>
+<div>
+<span class="block text-sm font-medium">Blog</span>
+<span class="block text-[10px] text-on-surface-variant">Tips &amp; insights</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<a href="about.html#contact" class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-xs scale-95 active:scale-90 transition-transform hover:bg-primary-container no-underline">Get Started</a>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-surface-container border-t border-white/5 px-8 py-6 space-y-2 font-['Space_Grotesk']">
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2" href="index.html">Home</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2" href="machines.html">Machines</a>
+<div class="border-t border-white/5 pt-2 mt-2">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2 px-0">Partnership</p>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="partners.html">How It Works</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="calculator.html">Revenue Calculator</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="schedule.html">Book a Free Visit</a>
+</div>
+<div class="border-t border-white/5 pt-2 mt-2">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2 px-0">Company</p>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="about.html">About Us</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="service-areas.html">Service Areas</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="blog.html">Blog</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto overflow-hidden">
+<header class="mb-20 relative">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<span class="font-label text-xs uppercase tracking-[0.4em] text-secondary mb-4 block font-bold">Revenue Forecasting v2.0</span>
+<h1 class="font-headline text-5xl md:text-8xl font-black tracking-tighter leading-none mb-6">
+                SEE WHAT YOU <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">COULD BE EARNING.</span>
+</h1>
+<p class="font-body text-on-surface-variant max-w-2xl text-lg md:text-xl leading-relaxed">
+                Enter your business details and see how much additional income a free robotic dessert machine could bring in every month — at zero cost to you.
+            </p>
+</header>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32">
+<div class="lg:col-span-7 space-y-8">
+<div class="glass-panel p-8 md:p-12 rounded-lg relative overflow-hidden">
+<div class="scanning-line"></div>
+<div class="space-y-12">
+<div class="space-y-6">
+<div class="flex justify-between items-end">
+<label class="font-headline text-2xl font-bold uppercase tracking-tight">Daily Foot Traffic</label>
+<span id="traffic-display" class="text-secondary font-headline text-3xl font-bold neon-glow-secondary">1,250</span>
+</div>
+<input id="traffic-slider" class="w-full" max="10000" min="100" type="range" value="1250"/>
+<div class="flex justify-between font-label text-[10px] text-outline uppercase tracking-widest">
+<span>Low Density</span>
+<span>High Traffic</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-end">
+<label class="font-headline text-2xl font-bold uppercase tracking-tight">Conversion Rate (%)</label>
+<span id="conversion-display" class="text-primary font-headline text-3xl font-bold neon-glow-primary">4.5%</span>
+</div>
+<input id="conversion-slider" class="w-full" max="15" min="1" step="0.5" type="range" value="4.5"/>
+<div class="flex justify-between font-label text-[10px] text-outline uppercase tracking-widest">
+<span>Conservative</span>
+<span>Peak Performance</span>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<label class="font-headline text-2xl font-bold uppercase tracking-tight block mb-4">Machine Type</label>
+<div class="grid grid-cols-3 gap-3">
+<button id="btn-cotton-candy" class="machine-type-btn border-2 border-primary bg-primary/10 rounded-lg p-4 text-center cursor-pointer transition-all" onclick="selectMachine('cotton-candy')">
+<span class="material-symbols-outlined text-2xl text-primary mb-1">cloud</span>
+<span class="block text-sm font-bold text-on-surface">Cotton Candy</span>
+<span class="block text-xs text-primary font-bold mt-1">$7 avg</span>
+</button>
+<button id="btn-ice-cream" class="machine-type-btn border border-white/10 rounded-lg p-4 text-center cursor-pointer transition-all hover:border-secondary/40" onclick="selectMachine('ice-cream')">
+<span class="material-symbols-outlined text-2xl text-secondary mb-1">icecream</span>
+<span class="block text-sm font-bold text-on-surface">Ice Cream</span>
+<span class="block text-xs text-secondary font-bold mt-1">$5 avg</span>
+</button>
+<button id="btn-chocoprint" class="machine-type-btn border border-white/10 rounded-lg p-4 text-center cursor-pointer transition-all hover:border-tertiary/40" onclick="selectMachine('chocoprint')">
+<span class="material-symbols-outlined text-2xl text-tertiary mb-1">view_in_ar</span>
+<span class="block text-sm font-bold text-on-surface">ChocoPrint</span>
+<span class="block text-xs text-tertiary font-bold mt-1">$8 avg</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant/20">
+<span class="font-label text-[10px] text-outline uppercase block mb-2">Avg. Item Price</span>
+<span id="price-display" class="font-headline text-2xl font-bold">$7.00</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant/20">
+<span class="font-label text-[10px] text-outline uppercase block mb-2">Operating Days</span>
+<span class="font-headline text-2xl font-bold">30 / Mo</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group relative bg-surface-container p-8 rounded-lg transition-all hover:bg-surface-container-high border border-outline-variant/10">
+<div class="absolute top-4 right-4 text-tertiary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Revenue-Based</h3>
+<p class="text-on-surface-variant text-sm mb-6">Zero upfront cost. We split the profit. The busier your business, the more you earn.</p>
+<div class="flex items-center gap-2 text-tertiary font-bold">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="group relative bg-surface-container p-8 rounded-lg transition-all hover:bg-surface-container-high border border-outline-variant/10">
+<div class="absolute top-4 right-4 text-secondary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Fixed Price Rent</h3>
+<p class="text-on-surface-variant text-sm mb-6">Guaranteed monthly income. We pay you a flat fee just for hosting our machine. Zero risk.</p>
+<div class="flex items-center gap-2 text-secondary font-bold">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="bg-gradient-to-br from-surface-container-highest to-surface-container-low p-10 md:p-16 rounded-lg h-full flex flex-col justify-center items-center text-center relative border border-white/5">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+<span class="font-label text-xs tracking-widest text-on-surface-variant uppercase mb-4 font-extrabold">Estimated Gross Revenue</span>
+<div class="relative mb-4">
+<span id="revenue-display" class="font-headline text-5xl md:text-6xl font-black tracking-tighter text-on-surface-variant relative">$20,250</span>
+</div>
+<span class="font-label text-xs tracking-widest text-secondary uppercase mb-4 font-extrabold">Your 25% Share</span>
+<div class="relative mb-8">
+<div class="absolute inset-0 blur-3xl bg-primary/20 scale-150"></div>
+<span id="partner-revenue-display" class="font-headline text-7xl md:text-9xl font-black tracking-tighter text-on-surface relative">$5,063</span>
+</div>
+<p id="revenue-desc" class="font-body text-on-surface-variant max-w-xs mb-12">
+                        Based on <span id="desc-conversion">4.5</span>% conversion and $<span id="desc-price">7.00</span> avg price (<span id="desc-machine">Cotton Candy</span>). You keep 25% of every sale — deposited monthly.
+                        <span class="text-on-surface font-bold">Results vary by location.</span>
+</p>
+<div class="w-full space-y-4">
+<a href="about.html#contact" class="block w-full bg-secondary text-on-secondary py-5 rounded-full font-headline font-bold text-lg hover:brightness-110 transition-all uppercase tracking-widest text-center no-underline">
+                            Get My Free Machine
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center mb-32">
+<div class="md:col-span-1">
+<h2 class="font-headline text-4xl font-black mb-6 uppercase leading-none italic tracking-tighter">The <br/>Robo Treats <br/><span class="text-tertiary">Edge.</span></h2>
+<p class="text-on-surface-variant">Why local businesses are choosing Vegas Robo Treats as their newest income stream.</p>
+</div>
+<div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex gap-4">
+<div class="h-12 w-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-weight="fill">bolt</span>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-2">24/7 Precision</h4>
+<p class="text-sm text-on-surface-variant">Consistent quality at any hour. No staff, no breaks, just perfect results every single time.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="h-12 w-12 shrink-0 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-weight="fill">bar_chart</span>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-2">Real-Time Data</h4>
+<p class="text-sm text-on-surface-variant">Monitor your earnings and inventory through our premium dashboard in real-time.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="relative rounded-lg overflow-hidden h-[400px]">
+<img loading="lazy" alt="Vegas Robo Treats futuristic lounge" class="w-full h-full object-cover" data-alt="futuristic digital lounge interior with neon pink and cyan lights glowing on metallic surfaces and robotic elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV4lgToGMym9XThYxd1L6sZWAKi0slmuO9GEVC675uDvG7cPwg-qvjmg1evkxHZ7VgRXdj7hxpcjRBegmjmlksxcXsgE6sCTKgmQGGgk9C9bBQLk9PdC-zvl8sRTFqqDhM-zndB7210JfQ3o-Zqd3cLgOHS3oreBUWBs4tsKxYZqrnWH56Mn6AQd3BYtzPRajOipRMQ9pO4ZuzI_zRO4iE69BtUgMigRRx17pQmUrqQfkAdjCqpm9-fgWAfmPQzhn6N-dBiY9oelU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-12 left-12">
+<h3 class="font-headline text-3xl font-black uppercase italic">Your next income stream is waiting.</h3>
+</div>
+</div>
+</main>
+<footer class="w-full bg-[#0e0e0e] border-t border-white/5 font-['Manrope'] text-xs uppercase tracking-widest">
+<div class="w-full px-12 py-16 flex flex-col md:flex-row justify-between items-center gap-8">
+<a href="index.html" class="text-lg font-bold text-[#df8eff] no-underline">VEGAS ROBO TREATS</a>
+<div class="flex flex-wrap justify-center gap-8 text-gray-500">
+<a class="hover:text-white transition-colors" href="privacy-policy.html">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="terms.html">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="specs-cotton-candy.html">Installation Guide</a>
+<a class="hover:text-white transition-colors" href="about.html#contact">Support</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="https://instagram.com/vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#df8eff] transition-colors no-underline" aria-label="Instagram">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+</a>
+<a href="https://tiktok.com/@vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#00e3fd] transition-colors no-underline" aria-label="TikTok">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46v-7.15a8.16 8.16 0 005.58 2.2v-3.46a4.85 4.85 0 01-1.4-.22 4.83 4.83 0 01-2.4-1.54V6.69h3.8z"/></svg>
+</a>
+<a href="https://facebook.com/vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#df8eff] transition-colors no-underline" aria-label="Facebook">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+</a>
+</div>
+<div class="text-gray-500">© 2026 VEGAS ROBO TREATS. ALL RIGHTS RESERVED.</div>
+</div>
+</footer>
+<script>
+    const trafficSlider = document.getElementById('traffic-slider');
+    const conversionSlider = document.getElementById('conversion-slider');
+    const trafficDisplay = document.getElementById('traffic-display');
+    const conversionDisplay = document.getElementById('conversion-display');
+    const revenueDisplay = document.getElementById('revenue-display');
+    const partnerRevenueDisplay = document.getElementById('partner-revenue-display');
+    const descConversion = document.getElementById('desc-conversion');
+    const descPrice = document.getElementById('desc-price');
+    const descMachine = document.getElementById('desc-machine');
+    const priceDisplay = document.getElementById('price-display');
+
+    const machines = {
+        'cotton-candy': { price: 7, name: 'Cotton Candy', color: 'primary', border: 'border-primary bg-primary/10' },
+        'ice-cream': { price: 5, name: 'Ice Cream', color: 'secondary', border: 'border-secondary bg-secondary/10' },
+        'chocoprint': { price: 8, name: 'ChocoPrint', color: 'tertiary', border: 'border-tertiary bg-tertiary/10' }
+    };
+
+    let selectedMachine = 'cotton-candy';
+    const operatingDays = 30;
+    const partnerShare = 0.25;
+
+    function selectMachine(type) {
+        selectedMachine = type;
+        const machine = machines[type];
+
+        // Update button styles
+        document.querySelectorAll('.machine-type-btn').forEach(btn => {
+            btn.className = 'machine-type-btn border border-white/10 rounded-lg p-4 text-center cursor-pointer transition-all hover:border-white/30';
+        });
+        const activeBtn = document.getElementById('btn-' + type);
+        activeBtn.className = 'machine-type-btn border-2 ' + machine.border + ' rounded-lg p-4 text-center cursor-pointer transition-all';
+
+        // Update price display
+        priceDisplay.textContent = '$' + machine.price.toFixed(2);
+        descPrice.textContent = machine.price.toFixed(2);
+        descMachine.textContent = machine.name;
+
+        calculate();
+    }
+
+    function calculate() {
+        const traffic = parseInt(trafficSlider.value);
+        const conversion = parseFloat(conversionSlider.value);
+        const avgPrice = machines[selectedMachine].price;
+        const revenue = Math.round(traffic * (conversion / 100) * avgPrice * operatingDays);
+        const partnerRevenue = Math.round(revenue * partnerShare);
+        trafficDisplay.textContent = traffic.toLocaleString();
+        conversionDisplay.textContent = conversion + '%';
+        descConversion.textContent = conversion;
+        revenueDisplay.textContent = '$' + revenue.toLocaleString();
+        partnerRevenueDisplay.textContent = '$' + partnerRevenue.toLocaleString();
+    }
+
+    trafficSlider.addEventListener('input', calculate);
+    conversionSlider.addEventListener('input', calculate);
+
+    // Initial calculation with default machine
+    calculate();
+</script>
+<!-- Sticky CTA -->
+<div id="sticky-cta" class="fixed bottom-6 right-6 z-[90] opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
+<a href="about.html#contact" class="flex items-center gap-3 bg-primary text-on-primary px-6 py-4 rounded-full font-bold font-headline uppercase tracking-widest text-xs shadow-[0px_0px_32px_rgba(223,142,255,0.4)] hover:scale-105 active:scale-95 transition-transform no-underline">
+<span class="material-symbols-outlined text-lg">robot_2</span>
+Get a Free Machine
+</a>
+</div>
+<script>
+(function() {
+    var cta = document.getElementById("sticky-cta");
+    if (!cta) return;
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 600) {
+            cta.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
+            cta.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
+        } else {
+            cta.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
+            cta.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
+        }
+    });
+})();
+</script>
+</body></html>
