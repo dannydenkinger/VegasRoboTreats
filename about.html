@@ -316,17 +316,23 @@ Company
                     We're actively selecting Las Vegas locations right now. Apply to receive a fully managed robotic machine at your venue — zero cost to you, passive income from day one.
                 </p>
 <div class="space-y-6">
-<div class="flex items-center gap-6 group">
+<div class="flex items-center gap-6 group cursor-pointer" onclick="copyToClipboard('(702) 555-0199', 'copy-phone')">
 <div class="w-12 h-12 rounded-full border border-secondary/30 flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
 <span class="material-symbols-outlined text-secondary" data-icon="phone">phone</span>
 </div>
-<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">(702) 555-0199</span>
+<div class="flex flex-col">
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant group-hover:text-secondary transition-colors">(702) 555-0199</span>
+<span id="copy-phone" class="text-[10px] text-secondary/0 transition-all duration-300 uppercase tracking-widest font-bold">Copied!</span>
 </div>
-<div class="flex items-center gap-6 group">
+</div>
+<div class="flex items-center gap-6 group cursor-pointer" onclick="copyToClipboard('Dakota@vegasrobotreats.com', 'copy-email')">
 <div class="w-12 h-12 rounded-full border border-secondary/30 flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
 <span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
 </div>
-<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Dakota@vegasrobotreats.com</span>
+<div class="flex flex-col">
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant group-hover:text-secondary transition-colors">Dakota@vegasrobotreats.com</span>
+<span id="copy-email" class="text-[10px] text-secondary/0 transition-all duration-300 uppercase tracking-widest font-bold">Copied!</span>
+</div>
 </div>
 <div class="flex items-center gap-6 group">
 <div class="w-12 h-12 rounded-full border border-secondary/30 flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
@@ -443,6 +449,18 @@ async function handleFormSubmit(e) {
     btn.disabled = false;
     btnLabel.textContent = 'Initialize';
     return false;
+}
+
+function copyToClipboard(text, feedbackId) {
+    navigator.clipboard.writeText(text).then(function() {
+        var el = document.getElementById(feedbackId);
+        el.classList.remove('text-secondary/0');
+        el.classList.add('text-secondary');
+        setTimeout(function() {
+            el.classList.remove('text-secondary');
+            el.classList.add('text-secondary/0');
+        }, 1800);
+    });
 }
 </script>
 
