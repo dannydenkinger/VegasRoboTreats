@@ -3,7 +3,7 @@ module.exports = async function handler(req, res) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { name, businessType, email, footTraffic, message } = req.body;
+    const { name, businessType, email, subject, message } = req.body;
 
     if (!name || !email) {
         return res.status(400).json({ error: 'Name and email are required' });
@@ -16,12 +16,12 @@ module.exports = async function handler(req, res) {
     }
 
     const html = `
-        <h2 style="color:#00e3fd;font-family:sans-serif;">New Machine Placement Inquiry</h2>
+        <h2 style="color:#00e3fd;font-family:sans-serif;">New Contact Form Submission</h2>
         <table style="font-family:sans-serif;font-size:15px;border-collapse:collapse;">
             <tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Name</td><td>${esc(name)}</td></tr>
             <tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Email</td><td><a href="mailto:${esc(email)}">${esc(email)}</a></td></tr>
-            <tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Business Type</td><td>${esc(businessType || '—')}</td></tr>
-            <tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Daily Foot Traffic</td><td>${esc(footTraffic || '—')}</td></tr>
+            <tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Company / Org</td><td>${esc(businessType || '—')}</td></tr>
+            <tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Reason</td><td>${esc(subject || '—')}</td></tr>
             <tr><td style="padding:6px 16px 6px 0;font-weight:bold;vertical-align:top;">Message</td><td>${esc(message || '—')}</td></tr>
         </table>
     `;
@@ -37,7 +37,7 @@ module.exports = async function handler(req, res) {
                 from: 'Vegas Robo Treats <noreply@vegasrobotreats.com>',
                 to: ['dakota@vegasrobotreats.com'],
                 reply_to: email,
-                subject: `New Inquiry — ${name}`,
+                subject: `[${esc(subject || 'General')}] — ${name}`,
                 html,
             }),
         });

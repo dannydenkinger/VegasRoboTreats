@@ -137,13 +137,7 @@ Company
 <span class="block text-[10px] text-on-surface-variant">Our story &amp; contact</span>
 </div>
 </a>
-<a href="service-areas.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
-<span class="material-symbols-outlined text-lg">location_on</span>
-<div>
-<span class="block text-sm font-medium">Service Areas</span>
-<span class="block text-[10px] text-on-surface-variant">Las Vegas Valley coverage</span>
-</div>
-</a>
+
 <a href="blog.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors no-underline text-gray-400 hover:text-[#00e3fd]">
 <span class="material-symbols-outlined text-lg">article</span>
 <div>
@@ -169,7 +163,7 @@ Company
 <div class="border-t border-white/5 pt-2 mt-2">
 <p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2 px-0">Company</p>
 <a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="about.html">About Us</a>
-<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="service-areas.html">Service Areas</a>
+
 <a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2 pl-4" href="blog.html">Blog</a>
 </div>
 </div>
@@ -352,8 +346,8 @@ Company
 <input class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface placeholder:text-outline transition-all py-3 px-0" placeholder="Leon S. Kennedy" type="text" name="name" required/>
 </div>
 <div class="space-y-2">
-<label class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant">Business Type</label>
-<input class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface placeholder:text-outline transition-all py-3 px-0" placeholder="Restaurant, Retail Store, Gym, etc." type="text" name="businessType"/>
+<label class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant">Company / Organization</label>
+<input class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface placeholder:text-outline transition-all py-3 px-0" placeholder="Optional" type="text" name="businessType"/>
 </div>
 </div>
 <div class="space-y-2">
@@ -361,20 +355,21 @@ Company
 <input class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface placeholder:text-outline transition-all py-3 px-0" placeholder="contact@venue.com" type="email" name="email" required/>
 </div>
 <div class="space-y-2">
-<label class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant">Estimated Daily Foot Traffic</label>
-<select class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface transition-all py-3 px-0" name="footTraffic">
-<option class="bg-surface text-on-surface">Under 100 Daily Visitors</option>
-<option class="bg-surface text-on-surface">100–500 Daily Visitors</option>
-<option class="bg-surface text-on-surface">500–1000 Daily Visitors</option>
-<option class="bg-surface text-on-surface">1000+ Daily Visitors</option>
+<label class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant">Reason for Inquiry</label>
+<select class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface transition-all py-3 px-0" name="subject">
+<option class="bg-surface text-on-surface">Machine Placement — Get a free machine for my venue</option>
+<option class="bg-surface text-on-surface">Partnership Inquiry</option>
+<option class="bg-surface text-on-surface">General Question</option>
+<option class="bg-surface text-on-surface">Support / Technical</option>
+<option class="bg-surface text-on-surface">Other</option>
 </select>
 </div>
 <div class="space-y-2">
-<label class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant">Message / Special Requirements</label>
-<textarea class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface placeholder:text-outline transition-all py-3 px-0 resize-none" placeholder="Tell us about your space..." rows="4" name="message"></textarea>
+<label class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant">Your Message</label>
+<textarea class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface placeholder:text-outline transition-all py-3 px-0 resize-none" placeholder="How can we help you?" rows="4" name="message"></textarea>
 </div>
 <button class="w-full py-5 rounded-full bg-secondary text-on-secondary font-black font-headline tracking-widest uppercase hover:bg-secondary-dim transition-all shadow-[0px_0px_24px_rgba(0,227,253,0.3)] flex items-center justify-center gap-4 group" type="submit">
-<span>Get My Free Machine</span>
+<span>Send Message</span>
 <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
 </button>
 </form>
@@ -395,9 +390,7 @@ Company
 <a href="https://instagram.com/vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#df8eff] transition-colors no-underline" aria-label="Instagram">
 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
 </a>
-<a href="https://tiktok.com/@vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#00e3fd] transition-colors no-underline" aria-label="TikTok">
-<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46v-7.15a8.16 8.16 0 005.58 2.2v-3.46a4.85 4.85 0 01-1.4-.22 4.83 4.83 0 01-2.4-1.54V6.69h3.8z"/></svg>
-</a>
+
 <a href="https://facebook.com/vegasrobotreats" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#df8eff] transition-colors no-underline" aria-label="Facebook">
 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
 </a>
@@ -409,8 +402,8 @@ Company
 <div id="form-success" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-md">
 <div class="bg-surface-container-low border border-white/10 rounded-lg p-16 text-center max-w-lg mx-4 shadow-2xl">
 <span class="material-symbols-outlined text-secondary text-6xl mb-6">check_circle</span>
-<h3 class="text-3xl font-black font-headline mb-4">APPLICATION RECEIVED</h3>
-<p class="text-on-surface-variant mb-8">Thanks for your interest! Our team will review your details and reach out within 1-2 business days to discuss placing a free machine at your location.</p>
+<h3 class="text-3xl font-black font-headline mb-4">MESSAGE SENT</h3>
+<p class="text-on-surface-variant mb-8">Thanks for reaching out! Our team will review your message and get back to you within 1-2 business days.</p>
 <button onclick="document.getElementById('form-success').classList.add('hidden')" class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:brightness-110 transition-all">Got It</button>
 </div>
 </div>
