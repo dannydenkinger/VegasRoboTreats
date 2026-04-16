@@ -148,7 +148,7 @@
 <a href="index.html" class="text-2xl font-black tracking-tighter text-[#df8eff] uppercase no-underline">VEGAS ROBO TREATS</a>
 <div class="hidden md:flex items-center gap-8">
 <a class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300" href="index.html">Home</a>
-<a class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300" href="machines.html">Machines</a>
+<a class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300" href="machines.html">The Fleet</a>
 <a class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300" href="partners.html">Partnership</a>
 <div class="relative group">
 <button class="text-gray-400 font-medium hover:text-[#00e3fd] transition-colors duration-300 flex items-center gap-1">
@@ -185,7 +185,7 @@ Company
 </div>
 <div id="mobile-menu" class="hidden md:hidden bg-surface-container border-t border-white/5 px-8 py-6 space-y-2 font-['Space_Grotesk']">
 <a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2" href="index.html">Home</a>
-<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2" href="machines.html">Machines</a>
+<a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2" href="machines.html">The Fleet</a>
 <a class="block text-gray-400 font-medium hover:text-[#00e3fd] transition-colors py-2" href="partners.html">Partnership</a>
 <div class="border-t border-white/5 pt-2 mt-2">
 <p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2 px-0">Company</p>
@@ -211,60 +211,22 @@ Company
 <div class="lg:col-span-7 space-y-8">
 <div class="glass-panel p-8 md:p-12 rounded-lg relative overflow-hidden">
 <div class="scanning-line"></div>
-<div class="space-y-12">
+<div class="space-y-10">
 <div class="space-y-6">
 <div class="flex justify-between items-end">
-<label class="font-headline text-2xl font-bold uppercase tracking-tight">Daily Foot Traffic</label>
-<span id="traffic-display" class="text-secondary font-headline text-3xl font-bold neon-glow-secondary">1,250</span>
+<label class="font-headline text-2xl font-bold uppercase tracking-tight">Sales Per Day</label>
+<span id="sales-display" class="text-secondary font-headline text-3xl font-bold neon-glow-secondary">25</span>
 </div>
-<input id="traffic-slider" class="w-full" max="10000" min="100" type="range" value="1250"/>
+<input id="sales-slider" class="w-full" max="50" min="10" step="1" type="range" value="25"/>
 <div class="flex justify-between font-label text-[10px] text-outline uppercase tracking-widest">
-<span>Low Density</span>
-<span>High Traffic</span>
+<span>10 / Day</span>
+<span>50 / Day</span>
 </div>
-</div>
-<div class="space-y-6">
-<div class="flex justify-between items-end">
-<label class="font-headline text-2xl font-bold uppercase tracking-tight">Conversion Rate (%)</label>
-<span id="conversion-display" class="text-primary font-headline text-3xl font-bold neon-glow-primary">4.5%</span>
-</div>
-<input id="conversion-slider" class="w-full" max="15" min="1" step="0.5" type="range" value="4.5"/>
-<div class="flex justify-between font-label text-[10px] text-outline uppercase tracking-widest">
-<span>Conservative</span>
-<span>Peak Performance</span>
-</div>
-</div>
-<div class="space-y-6">
-<div>
-<label class="font-headline text-2xl font-bold uppercase tracking-tight block mb-4">Machine Type</label>
-<div class="grid grid-cols-3 gap-3">
-<button id="btn-cotton-candy" class="machine-type-btn border-2 border-primary bg-primary/10 rounded-lg p-4 text-center cursor-pointer transition-all" onclick="selectMachine('cotton-candy')">
-<span class="material-symbols-outlined text-2xl text-primary mb-1">cloud</span>
-<span class="block text-sm font-bold text-on-surface">Cotton Candy</span>
-<span class="block text-xs text-primary font-bold mt-1">$7 avg</span>
-</button>
-<button id="btn-ice-cream" class="machine-type-btn border border-white/10 rounded-lg p-4 text-center cursor-pointer transition-all hover:border-secondary/40" onclick="selectMachine('ice-cream')">
-<span class="material-symbols-outlined text-2xl text-secondary mb-1">icecream</span>
-<span class="block text-sm font-bold text-on-surface">Ice Cream</span>
-<span class="block text-xs text-secondary font-bold mt-1">$5 avg</span>
-</button>
-<button id="btn-chocoprint" class="machine-type-btn border border-white/10 rounded-lg p-4 text-center cursor-pointer transition-all hover:border-tertiary/40" onclick="selectMachine('chocoprint')">
-<span class="material-symbols-outlined text-2xl text-tertiary mb-1">view_in_ar</span>
-<span class="block text-sm font-bold text-on-surface">ChocoPrint</span>
-<span class="block text-xs text-tertiary font-bold mt-1">$8 avg</span>
-</button>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant/20">
-<span class="font-label text-[10px] text-outline uppercase block mb-2">Avg. Item Price</span>
-<span id="price-display" class="font-headline text-2xl font-bold">$7.00</span>
 </div>
 <div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant/20">
-<span class="font-label text-[10px] text-outline uppercase block mb-2">Operating Days</span>
-<span class="font-headline text-2xl font-bold">30 / Mo</span>
-</div>
-</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+<span class="text-on-surface font-bold">Based on $8 per sale</span> using the Cotton Candy machine as a baseline. Actual revenue varies by machine type, price point, and your specific revenue share agreement.
+</p>
 </div>
 </div>
 </div>
@@ -275,10 +237,10 @@ Company
 </div>
 <h3 class="font-headline text-xl font-bold mb-3">Revenue-Based</h3>
 <p class="text-on-surface-variant text-sm mb-6">Zero upfront cost. We split the profit. The busier your business, the more you earn.</p>
-<div class="flex items-center gap-2 text-tertiary font-bold">
+<a href="blog.html" class="flex items-center gap-2 text-tertiary font-bold hover:gap-4 transition-all no-underline">
 <span>Learn More</span>
 <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</div>
+</a>
 </div>
 <div class="group relative bg-surface-container p-8 rounded-lg transition-all hover:bg-surface-container-high border border-outline-variant/10">
 <div class="absolute top-4 right-4 text-secondary">
@@ -286,28 +248,28 @@ Company
 </div>
 <h3 class="font-headline text-xl font-bold mb-3">Fixed Price Rent</h3>
 <p class="text-on-surface-variant text-sm mb-6">Guaranteed monthly income. We pay you a flat fee just for hosting our machine. Zero risk.</p>
-<div class="flex items-center gap-2 text-secondary font-bold">
+<a href="blog.html" class="flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all no-underline">
 <span>Learn More</span>
 <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</div>
+</a>
 </div>
 </div>
 </div>
 <div class="lg:col-span-5">
 <div class="bg-gradient-to-br from-surface-container-highest to-surface-container-low p-10 md:p-16 rounded-lg h-full flex flex-col justify-center items-center text-center relative border border-white/5">
 <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
-<span class="font-label text-xs tracking-widest text-on-surface-variant uppercase mb-4 font-extrabold">Estimated Gross Revenue</span>
+<span class="font-label text-xs tracking-widest text-on-surface-variant uppercase mb-4 font-extrabold">Estimated Monthly Revenue</span>
 <div class="relative mb-4">
-<span id="revenue-display" class="font-headline text-5xl md:text-6xl font-black tracking-tighter text-on-surface-variant relative">$20,250</span>
+<span id="revenue-display" class="font-headline text-5xl md:text-6xl font-black tracking-tighter text-on-surface-variant relative">$6,000</span>
 </div>
-<span class="font-label text-xs tracking-widest text-secondary uppercase mb-4 font-extrabold">Your 25% Share</span>
+<span class="font-label text-xs tracking-widest text-secondary uppercase mb-4 font-extrabold">Your 15% Share</span>
 <div class="relative mb-8">
 <div class="absolute inset-0 blur-3xl bg-primary/20 scale-150"></div>
-<span id="partner-revenue-display" class="font-headline text-7xl md:text-9xl font-black tracking-tighter text-on-surface relative">$5,063</span>
+<span id="partner-revenue-display" class="font-headline text-7xl md:text-9xl font-black tracking-tighter text-on-surface relative">$900</span>
 </div>
-<p id="revenue-desc" class="font-body text-on-surface-variant max-w-xs mb-12">
-                        Based on <span id="desc-conversion">4.5</span>% conversion and $<span id="desc-price">7.00</span> avg price (<span id="desc-machine">Cotton Candy</span>). You keep 25% of every sale — deposited monthly.
-                        <span class="text-on-surface font-bold">Results vary by location.</span>
+<p class="font-body text-on-surface-variant max-w-xs mb-12">
+Based on <span id="desc-sales">25</span> sales/day at $8/sale over 30 days. Your 15% share is deposited monthly.
+<span class="text-on-surface font-bold">Results vary by location and agreement.</span>
 </p>
 <div class="w-full space-y-4">
 <a href="about.html#contact" class="block w-full bg-secondary text-on-secondary py-5 rounded-full font-headline font-bold text-lg hover:brightness-110 transition-all uppercase tracking-widest text-center no-underline">
@@ -325,26 +287,26 @@ Company
 <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
 <div class="flex gap-4">
 <div class="h-12 w-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" data-weight="fill">bolt</span>
+<span class="material-symbols-outlined" data-weight="fill">groups</span>
 </div>
 <div>
-<h4 class="font-headline font-bold mb-2">24/7 Precision</h4>
-<p class="text-sm text-on-surface-variant">Consistent quality at any hour. No staff, no breaks, just perfect results every single time.</p>
+<h4 class="font-headline font-bold mb-2">Built-In Crowd Draw</h4>
+<p class="text-sm text-on-surface-variant">The machines are a spectacle people seek out. Your venue becomes a destination — bringing in new customers who stay longer.</p>
 </div>
 </div>
 <div class="flex gap-4">
 <div class="h-12 w-12 shrink-0 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined" data-weight="fill">bar_chart</span>
+<span class="material-symbols-outlined" data-weight="fill">pin_drop</span>
 </div>
 <div>
-<h4 class="font-headline font-bold mb-2">Real-Time Data</h4>
-<p class="text-sm text-on-surface-variant">Monitor your earnings and inventory through our premium dashboard in real-time.</p>
+<h4 class="font-headline font-bold mb-2">Las Vegas Only</h4>
+<p class="text-sm text-on-surface-variant">We operate exclusively in the Las Vegas Valley. Local operators, local service — you're not a ticket number, you're a partner.</p>
 </div>
 </div>
 </div>
 </section>
 <div class="relative rounded-lg overflow-hidden h-[400px]">
-<img loading="lazy" alt="Vegas Robo Treats futuristic lounge" class="w-full h-full object-cover" data-alt="futuristic digital lounge interior with neon pink and cyan lights glowing on metallic surfaces and robotic elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV4lgToGMym9XThYxd1L6sZWAKi0slmuO9GEVC675uDvG7cPwg-qvjmg1evkxHZ7VgRXdj7hxpcjRBegmjmlksxcXsgE6sCTKgmQGGgk9C9bBQLk9PdC-zvl8sRTFqqDhM-zndB7210JfQ3o-Zqd3cLgOHS3oreBUWBs4tsKxYZqrnWH56Mn6AQd3BYtzPRajOipRMQ9pO4ZuzI_zRO4iE69BtUgMigRRx17pQmUrqQfkAdjCqpm9-fgWAfmPQzhn6N-dBiY9oelU"/>
+<img loading="lazy" alt="Customer enjoying the Cotton Candy Robot at a venue" class="w-full h-full object-cover" src="photos/cotton-candy-customer-happy.webp"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
 <div class="absolute bottom-12 left-12">
 <h3 class="font-headline text-3xl font-black uppercase italic">Your next income stream is waiting.</h3>
@@ -373,63 +335,27 @@ Company
 </div>
 </footer>
 <script>
-    const trafficSlider = document.getElementById('traffic-slider');
-    const conversionSlider = document.getElementById('conversion-slider');
-    const trafficDisplay = document.getElementById('traffic-display');
-    const conversionDisplay = document.getElementById('conversion-display');
+    const salesSlider = document.getElementById('sales-slider');
+    const salesDisplay = document.getElementById('sales-display');
     const revenueDisplay = document.getElementById('revenue-display');
     const partnerRevenueDisplay = document.getElementById('partner-revenue-display');
-    const descConversion = document.getElementById('desc-conversion');
-    const descPrice = document.getElementById('desc-price');
-    const descMachine = document.getElementById('desc-machine');
-    const priceDisplay = document.getElementById('price-display');
+    const descSales = document.getElementById('desc-sales');
 
-    const machines = {
-        'cotton-candy': { price: 7, name: 'Cotton Candy', color: 'primary', border: 'border-primary bg-primary/10' },
-        'ice-cream': { price: 5, name: 'Ice Cream', color: 'secondary', border: 'border-secondary bg-secondary/10' },
-        'chocoprint': { price: 8, name: 'ChocoPrint', color: 'tertiary', border: 'border-tertiary bg-tertiary/10' }
-    };
-
-    let selectedMachine = 'cotton-candy';
+    const pricePerSale = 8;
     const operatingDays = 30;
-    const partnerShare = 0.25;
-
-    function selectMachine(type) {
-        selectedMachine = type;
-        const machine = machines[type];
-
-        // Update button styles
-        document.querySelectorAll('.machine-type-btn').forEach(btn => {
-            btn.className = 'machine-type-btn border border-white/10 rounded-lg p-4 text-center cursor-pointer transition-all hover:border-white/30';
-        });
-        const activeBtn = document.getElementById('btn-' + type);
-        activeBtn.className = 'machine-type-btn border-2 ' + machine.border + ' rounded-lg p-4 text-center cursor-pointer transition-all';
-
-        // Update price display
-        priceDisplay.textContent = '$' + machine.price.toFixed(2);
-        descPrice.textContent = machine.price.toFixed(2);
-        descMachine.textContent = machine.name;
-
-        calculate();
-    }
+    const partnerShare = 0.15;
 
     function calculate() {
-        const traffic = parseInt(trafficSlider.value);
-        const conversion = parseFloat(conversionSlider.value);
-        const avgPrice = machines[selectedMachine].price;
-        const revenue = Math.round(traffic * (conversion / 100) * avgPrice * operatingDays);
-        const partnerRevenue = Math.round(revenue * partnerShare);
-        trafficDisplay.textContent = traffic.toLocaleString();
-        conversionDisplay.textContent = conversion + '%';
-        descConversion.textContent = conversion;
-        revenueDisplay.textContent = '$' + revenue.toLocaleString();
+        const salesPerDay = parseInt(salesSlider.value);
+        const monthlyRevenue = salesPerDay * operatingDays * pricePerSale;
+        const partnerRevenue = Math.round(monthlyRevenue * partnerShare);
+        salesDisplay.textContent = salesPerDay;
+        if (descSales) descSales.textContent = salesPerDay;
+        revenueDisplay.textContent = '$' + monthlyRevenue.toLocaleString();
         partnerRevenueDisplay.textContent = '$' + partnerRevenue.toLocaleString();
     }
 
-    trafficSlider.addEventListener('input', calculate);
-    conversionSlider.addEventListener('input', calculate);
-
-    // Initial calculation with default machine
+    salesSlider.addEventListener('input', calculate);
     calculate();
 </script>
 <!-- Sticky CTA -->
