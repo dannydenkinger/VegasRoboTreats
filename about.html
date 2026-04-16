@@ -313,7 +313,7 @@ Company
 <span class="text-primary">TO YOUR BUSINESS</span>
 </h2>
 <p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
-                    Ready for a free robotic dessert machine at your location? We're accepting applications from local businesses now. No cost, no catch — just a new revenue stream.
+                    We're actively selecting Las Vegas locations right now. Apply to receive a fully managed robotic machine at your venue — zero cost to you, passive income from day one.
                 </p>
 <div class="space-y-6">
 <div class="flex items-center gap-6 group">
@@ -326,13 +326,13 @@ Company
 <div class="w-12 h-12 rounded-full border border-secondary/30 flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
 <span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
 </div>
-<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">partner@vegastreats.com</span>
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Dakota@vegasrobotreats.com</span>
 </div>
 <div class="flex items-center gap-6 group">
 <div class="w-12 h-12 rounded-full border border-secondary/30 flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
 <span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
 </div>
-<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Las Vegas, NV — HQ</span>
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Las Vegas, NV</span>
 </div>
 </div>
 </div>
@@ -369,7 +369,7 @@ Company
 <textarea class="w-full bg-surface-variant/50 border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-surface placeholder:text-outline transition-all py-3 px-0 resize-none" placeholder="How can we help you?" rows="4" name="message"></textarea>
 </div>
 <button class="w-full py-5 rounded-full bg-secondary text-on-secondary font-black font-headline tracking-widest uppercase hover:bg-secondary-dim transition-all shadow-[0px_0px_24px_rgba(0,227,253,0.3)] flex items-center justify-center gap-4 group" type="submit">
-<span>Send Message</span>
+<span>Initialize</span>
 <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
 </button>
 </form>
@@ -402,8 +402,8 @@ Company
 <div id="form-success" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-md">
 <div class="bg-surface-container-low border border-white/10 rounded-lg p-16 text-center max-w-lg mx-4 shadow-2xl">
 <span class="material-symbols-outlined text-secondary text-6xl mb-6">check_circle</span>
-<h3 class="text-3xl font-black font-headline mb-4">MESSAGE SENT</h3>
-<p class="text-on-surface-variant mb-8">Thanks for reaching out! Our team will review your message and get back to you within 1-2 business days.</p>
+<h3 class="text-3xl font-black font-headline mb-4">SIGNAL ESTABLISHED</h3>
+<p class="text-on-surface-variant mb-8">Signal established. A member of our team will reach out within the next 1-2 business days.</p>
 <button onclick="document.getElementById('form-success').classList.add('hidden')" class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:brightness-110 transition-all">Got It</button>
 </div>
 </div>
@@ -419,7 +419,7 @@ async function handleFormSubmit(e) {
     const btn = form.querySelector('button[type="submit"]');
     const btnLabel = btn.querySelector('span:first-child');
     btn.disabled = true;
-    btnLabel.textContent = 'Sending...';
+    btnLabel.textContent = 'Initializing...';
 
     try {
         const formData = new FormData(form);
@@ -441,7 +441,7 @@ async function handleFormSubmit(e) {
     }
 
     btn.disabled = false;
-    btnLabel.textContent = 'Get My Free Machine';
+    btnLabel.textContent = 'Initialize';
     return false;
 }
 </script>
