@@ -235,34 +235,42 @@ $1
 </div>
 </section>
 <!-- Social Proof Banner -->
-<section class="bg-surface-container-low border-y border-white/5">
-<div class="container mx-auto px-4 md:px-8">
-<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/5">
-<div class="flex items-center gap-5 px-8 py-7">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-primary text-lg">location_city</span>
-</div>
+<section class="border-y border-white/5 bg-surface-container-lowest overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-4 md:px-8">
+<div class="flex flex-col md:flex-row items-stretch divide-y md:divide-y-0 md:divide-x divide-white/[0.06]">
+<!-- Pill 1 -->
+<div class="flex items-center gap-4 px-8 py-6 flex-1">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0">location_city</span>
 <div>
-<p class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant font-bold mb-0.5">Coverage</p>
-<p class="font-headline font-bold text-on-surface text-sm">Las Vegas Valley</p>
+<p class="font-headline font-black text-base text-on-surface leading-tight">Las Vegas Valley</p>
+<p class="text-[11px] text-on-surface-variant mt-0.5">Local coverage &amp; service</p>
 </div>
 </div>
-<div class="flex items-center gap-5 px-8 py-7">
-<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-secondary text-lg">smart_toy</span>
+<!-- Divider dot — hidden on mobile -->
+<div class="hidden md:flex items-center justify-center px-0">
 </div>
+<!-- Pill 2 -->
+<div class="flex items-center gap-4 px-8 py-6 flex-1">
+<span class="material-symbols-outlined text-secondary text-2xl shrink-0">smart_toy</span>
 <div>
-<p class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant font-bold mb-0.5">Impact</p>
-<p class="font-headline font-bold text-on-surface text-sm">Drives Foot Traffic &amp; Engagement</p>
+<p class="font-headline font-black text-base text-on-surface leading-tight">Fully Automated</p>
+<p class="text-[11px] text-on-surface-variant mt-0.5">Drives foot traffic &amp; engagement</p>
 </div>
 </div>
-<div class="flex items-center gap-5 px-8 py-7">
-<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-tertiary text-lg">trending_up</span>
-</div>
+<!-- Pill 3 -->
+<div class="flex items-center gap-4 px-8 py-6 flex-1">
+<span class="material-symbols-outlined text-tertiary text-2xl shrink-0">payments</span>
 <div>
-<p class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant font-bold mb-0.5">Revenue Model</p>
-<p class="font-headline font-bold text-on-surface text-sm">Passive Income From Day One</p>
+<p class="font-headline font-black text-base text-on-surface leading-tight">$0 Cost to You</p>
+<p class="text-[11px] text-on-surface-variant mt-0.5">Passive income from day one</p>
+</div>
+</div>
+<!-- Pill 4 -->
+<div class="flex items-center gap-4 px-8 py-6 flex-1">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0">handyman</span>
+<div>
+<p class="font-headline font-black text-base text-on-surface leading-tight">Fully Managed</p>
+<p class="text-[11px] text-on-surface-variant mt-0.5">We handle everything, always</p>
 </div>
 </div>
 </div>
@@ -362,15 +370,20 @@ $1
 </section>
 
 <!-- CTA Section -->
-<section class="py-16 md:py-32 bg-primary">
-<div class="container mx-auto px-4 md:px-8 text-center">
-<h2 class="text-on-primary text-3xl sm:text-5xl md:text-7xl font-black font-headline tracking-tighter mb-6 md:mb-8">GET YOUR FREE <br/> MACHINE TODAY</h2>
-<p class="text-on-primary-container text-base md:text-xl lg:text-2xl font-bold max-w-2xl mx-auto mb-8 md:mb-12">
-                    No cost. No catch. We place the machine, handle everything, and you earn from every sale. Apply now — spots are filling up.
-                </p>
-<a href="about.html#contact" class="inline-block bg-surface text-on-surface px-12 py-6 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform shadow-2xl no-underline">
-                    Apply For a Free Machine
-                </a>
+<section class="py-8 md:py-16 px-4 md:px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="bg-gradient-to-br from-primary to-secondary rounded-lg p-16 text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="relative z-10">
+<h2 class="text-3xl sm:text-5xl md:text-7xl font-black font-headline tracking-tighter text-on-primary-container mb-6 md:mb-8">GET YOUR FREE <br/> MACHINE TODAY</h2>
+<p class="text-on-primary-container/80 text-base md:text-xl lg:text-2xl font-bold max-w-2xl mx-auto mb-8 md:mb-12">
+No cost. No catch. We place the machine, handle everything, and you earn from every sale.
+</p>
+<a href="about.html#contact" class="inline-block bg-on-primary-container text-white px-12 py-6 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform shadow-2xl no-underline">
+Let's Chat
+</a>
+</div>
+</div>
 </div>
 </section>
 </main>
