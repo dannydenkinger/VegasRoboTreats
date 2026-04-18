@@ -236,8 +236,15 @@ Company
 </div>
 </section>
 <!-- Social Proof Banner -->
-<section class="border-y border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden">
-<div class="max-w-screen-2xl mx-auto px-4 md:px-8">
+<section class="border-y border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden relative">
+<!-- Decorative glows -->
+<div class="absolute -left-16 top-1/2 -translate-y-1/2 w-48 h-48 bg-primary/20 rounded-full blur-[60px] pointer-events-none"></div>
+<div class="absolute -right-16 top-1/2 -translate-y-1/2 w-48 h-48 bg-secondary/20 rounded-full blur-[60px] pointer-events-none"></div>
+<div class="absolute left-1/2 -translate-x-1/2 top-0 w-64 h-full bg-primary/5 blur-[80px] pointer-events-none"></div>
+<!-- Thin neon top accent line -->
+<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/40 to-transparent pointer-events-none"></div>
+<div class="max-w-screen-2xl mx-auto px-4 md:px-8 relative z-10">
 <div class="flex flex-col md:flex-row items-stretch divide-y md:divide-y-0 md:divide-x divide-white/[0.06]">
 <!-- Pill 1 -->
 <div class="flex items-center justify-center gap-4 px-8 py-10 md:py-12 flex-1">
@@ -425,7 +432,7 @@ Let's Chat
                 bgColor: '#110b1a',
                 primaryColor: '#df8eff',
                 secondaryColor: '#df8eff',
-                status: 'Always On'
+                status: 'Truly Passive'
             },
             {
                 title: 'NEXT-GEN <br/> <span class="text-secondary italic">AUTONOMOUS RETAIL.</span>',
