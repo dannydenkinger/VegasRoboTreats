@@ -524,6 +524,38 @@ Let's Chat
 
         // Auto-advance
         setInterval(nextSlide, 10000);
+
+        // Mobile swipe — locks horizontal page scroll while swiping on carousel
+        (function() {
+            const el = document.getElementById('hero-carousel');
+            let startX = 0, startY = 0, locked = false;
+
+            el.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                locked = false;
+            }, { passive: true });
+
+            el.addEventListener('touchmove', function(e) {
+                const dx = e.touches[0].clientX - startX;
+                const dy = e.touches[0].clientY - startY;
+                if (!locked) {
+                    // Determine intent on first significant move
+                    if (Math.abs(dx) > Math.abs(dy)) {
+                        locked = 'h'; // horizontal — take over
+                    } else {
+                        locked = 'v'; // vertical — let browser scroll
+                    }
+                }
+                if (locked === 'h') e.preventDefault(); // block page scroll
+            }, { passive: false });
+
+            el.addEventListener('touchend', function(e) {
+                if (locked !== 'h') return;
+                const dx = startX - e.changedTouches[0].clientX;
+                if (Math.abs(dx) > 40) dx > 0 ? nextSlide() : prevSlide();
+            }, { passive: true });
+        })();
     </script>
 <script type="application/ld+json">
 {
