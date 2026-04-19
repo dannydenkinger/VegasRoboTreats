@@ -186,15 +186,18 @@ Company
 </nav>
 <main class="relative overflow-hidden">
 <!-- Hero Carousel Section -->
-<section class="relative h-screen min-h-[800px] flex items-end md:items-center overflow-hidden slide-bg bg-[#0e0e0e]" id="hero-carousel">
+<section class="relative h-screen md:min-h-[800px] flex items-end md:items-center overflow-hidden slide-bg bg-[#0e0e0e]" id="hero-carousel">
 <!-- Dynamic Background Image Layer -->
 <div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface via-surface/80 md:via-surface/60 to-transparent z-10"></div>
-<img loading="lazy" class="w-full h-full object-cover object-center slide-content opacity-100" data-alt="Hero Machine" id="hero-image" src="photos/newcarousel1.png"/>
+<div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface/80 md:from-surface via-surface/20 md:via-surface/60 to-transparent z-10"></div>
+<!-- Desktop image (landscape) -->
+<img loading="lazy" class="hidden md:block w-full h-full object-cover object-center slide-content opacity-100" id="hero-image-desktop" src="photos/newcarousel1.png"/>
+<!-- Mobile image (portrait 9:16) -->
+<img loading="lazy" class="block md:hidden w-full h-full object-cover object-center slide-content opacity-100" id="hero-image-mobile" src="photos/mobile1.png"/>
 </div>
 <!-- Content -->
-<div class="container mx-auto px-4 md:px-8 relative z-20 editorial-grid pb-36 md:pb-0">
-<div class="col-span-12 md:col-span-7 flex flex-col justify-center gap-6">
+<div class="container mx-auto px-4 md:px-8 relative z-20 editorial-grid pb-24 md:pb-0">
+<div class="col-span-12 md:col-span-7 flex flex-col justify-center gap-4 md:gap-6">
 <div class="flex items-center gap-4">
 <span class="scanning-line top-0 opacity-50"></span>
 <div class="bg-secondary/10 border border-secondary/20 px-4 py-1 rounded-full" id="hero-status-pill">
@@ -202,18 +205,18 @@ Company
 </div>
 </div>
 <div class="slide-content" id="hero-text-container">
-<h1 class="text-4xl sm:text-5xl md:text-[5rem] font-black font-headline leading-[0.9] tracking-tighter" id="hero-title">
+<h1 class="text-3xl sm:text-4xl md:text-[5rem] font-black font-headline leading-[0.9] tracking-tighter" id="hero-title">
                             ROBOTIC CONCESSIONS <br/> <span class="text-primary italic">FOR YOUR VENUE.</span>
 </h1>
-<p class="text-on-surface-variant text-lg md:text-xl max-w-xl font-medium mt-6" id="hero-desc">
+<p class="text-on-surface-variant text-sm md:text-xl max-w-xl font-medium mt-4 md:mt-6 hidden md:block" id="hero-desc">
                             We deploy state-of-the-art robotic dessert machines in your space at zero cost — turning idle floor space into a hands-free income stream.
                         </p>
 </div>
-<div class="flex flex-wrap gap-4 mt-4">
-<button class="bg-primary text-on-primary px-6 py-4 md:px-10 md:py-5 rounded-xl font-black uppercase tracking-widest text-xs md:text-sm hover:scale-105 transition-transform neon-glow-primary" id="hero-cta-primary" onclick="location.href='machines.html'">
+<div class="flex flex-wrap gap-3 md:gap-4 mt-2 md:mt-4">
+<button class="bg-primary text-on-primary px-5 py-3 md:px-10 md:py-5 rounded-xl font-black uppercase tracking-widest text-xs md:text-sm hover:scale-105 transition-transform neon-glow-primary" id="hero-cta-primary" onclick="location.href='machines.html'">
                             Explore the Fleet
                         </button>
-<button class="border border-secondary/40 text-secondary px-6 py-4 md:px-10 md:py-5 rounded-xl font-black uppercase tracking-widest text-xs md:text-sm hover:bg-secondary/10 transition-all" id="hero-cta-secondary" onclick="location.href='about.html#contact'">
+<button class="border border-secondary/40 text-secondary px-5 py-3 md:px-10 md:py-5 rounded-xl font-black uppercase tracking-widest text-xs md:text-sm hover:bg-secondary/10 transition-all" id="hero-cta-secondary" onclick="location.href='about.html#contact'">
                             Partner with Us
                         </button>
 </div>
@@ -419,6 +422,7 @@ Let's Chat
                 title: 'ROBOTIC CONCESSIONS <br/> <span class="text-primary italic">FOR YOUR VENUE.</span>',
                 desc: 'We deploy state-of-the-art robotic dessert machines in your space at zero cost — turning idle floor space into a hands-free income stream.',
                 image: 'photos/newcarousel1.png',
+                mobileImage: 'photos/mobile1.png',
                 bgColor: '#0e0e0e',
                 primaryColor: '#df8eff',
                 secondaryColor: '#00e3fd',
@@ -428,6 +432,7 @@ Let's Chat
                 title: 'ZERO STAFF. <br/> <span class="text-primary italic">ZERO OVERHEAD.</span>',
                 desc: 'Vegas moves fast — so do our machines. Fully automated, cashless, and self-contained: next-gen robotic concessions built for the world\'s busiest market.',
                 image: 'photos/hero-cotton-candy.png',
+                mobileImage: 'photos/mobile2.png',
                 bgColor: '#110b1a',
                 primaryColor: '#ff6e81',
                 secondaryColor: '#ff6e81',
@@ -437,6 +442,7 @@ Let's Chat
                 title: 'NEXT-GEN <br/> <span class="text-secondary italic">AUTONOMOUS RETAIL.</span>',
                 desc: 'No staffing, no overhead. We handle 100% of maintenance and restocking — a premium amenity that runs itself while you focus on your business.',
                 image: 'photos/Skyline.png',
+                mobileImage: 'photos/mobile3.png',
                 bgColor: '#0b161a',
                 primaryColor: '#00e3fd',
                 secondaryColor: '#00e3fd',
@@ -449,7 +455,8 @@ Let's Chat
         function updateSlide() {
             const slide = slides[currentSlide];
             const section = document.getElementById('hero-carousel');
-            const img = document.getElementById('hero-image');
+            const desktopImg = document.getElementById('hero-image-desktop');
+            const mobileImg = document.getElementById('hero-image-mobile');
             const title = document.getElementById('hero-title');
             const desc = document.getElementById('hero-desc');
             const statusText = document.querySelector('#hero-status-pill span');
@@ -457,30 +464,33 @@ Let's Chat
             const ctaSecondary = document.getElementById('hero-cta-secondary');
 
             // Fade out
-            img.style.opacity = '0';
+            desktopImg.style.opacity = '0';
+            mobileImg.style.opacity = '0';
             title.parentElement.style.opacity = '0';
             title.parentElement.style.transform = 'translateY(20px)';
 
             setTimeout(() => {
-                // Update Content
+                // Update images
                 section.style.backgroundColor = slide.bgColor;
-                img.src = slide.image;
+                desktopImg.src = slide.image;
+                mobileImg.src = slide.mobileImage;
                 title.innerHTML = slide.title;
                 desc.textContent = slide.desc;
                 statusText.textContent = slide.status;
-                
+
                 // Color updates
                 ctaPrimary.style.backgroundColor = slide.primaryColor;
-                ctaSecondary.style.borderColor = `${slide.secondaryColor}66`; // 40% opacity
+                ctaSecondary.style.borderColor = `${slide.secondaryColor}66`;
                 ctaSecondary.style.color = slide.secondaryColor;
-                statusText.parentElement.style.borderColor = `${slide.secondaryColor}33`; // 20% opacity
+                statusText.parentElement.style.borderColor = `${slide.secondaryColor}33`;
                 statusText.style.color = slide.secondaryColor;
 
                 // Fade in
-                img.style.opacity = '1';
+                desktopImg.style.opacity = '1';
+                mobileImg.style.opacity = '1';
                 title.parentElement.style.opacity = '1';
                 title.parentElement.style.transform = 'translateY(0)';
-                
+
                 // Update dots
                 for (let i = 0; i < slides.length; i++) {
                     const dot = document.getElementById(`dot-${i}`);
