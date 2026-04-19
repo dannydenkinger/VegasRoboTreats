@@ -222,8 +222,8 @@ Company
 </div>
 </div>
 </div>
-<!-- Navigation Controls (desktop only) -->
-<div class="hidden md:flex absolute bottom-12 right-12 z-40 items-center gap-6">
+<!-- Navigation Controls -->
+<div class="absolute bottom-12 right-12 z-40 hidden md:flex items-center gap-6">
 <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" onclick="prevSlide()">
 <span class="material-symbols-outlined">chevron_left</span>
 </button>
@@ -524,21 +524,6 @@ Let's Chat
 
         // Auto-advance
         setInterval(nextSlide, 10000);
-
-        // Mobile swipe support
-        (function() {
-            const el = document.getElementById('hero-carousel');
-            let startX = 0;
-            el.addEventListener('touchstart', function(e) {
-                startX = e.touches[0].clientX;
-            }, { passive: true });
-            el.addEventListener('touchend', function(e) {
-                const diff = startX - e.changedTouches[0].clientX;
-                if (Math.abs(diff) > 40) {
-                    diff > 0 ? nextSlide() : prevSlide();
-                }
-            }, { passive: true });
-        })();
     </script>
 <script type="application/ld+json">
 {
